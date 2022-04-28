@@ -1,0 +1,43 @@
+.row {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px; /* To stop the transition from colliding with the scroll bar*/
+}
+
+/* Hide scrollbar, but keep functionality */
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__poster {
+  /* For the images to be contained */
+  object-fit: contain; /* Make image maintain its aspect ratio */
+  width: 100%;
+  max-height: 100px;
+  /* End */
+
+  margin-right: 10px;
+
+  /* Make the hover effect smoother */
+  transition: transform 450ms;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+.row__posterLarge {
+  max-height: 250px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
